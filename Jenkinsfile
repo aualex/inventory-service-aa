@@ -11,8 +11,8 @@
  */
 
 def buildAgentName(String jobName, String buildNumber) {
-    if (jobName.length() > 40) {
-        jobName = jobName.substring(0, 40);
+    if (jobName.length() > 50) {
+        jobName = jobName.substring(0, 50);
     }
 
     return "agent.${jobName}.${buildNumber}".replace('_', '-').replace('/', '-').replace('-.', '.');
